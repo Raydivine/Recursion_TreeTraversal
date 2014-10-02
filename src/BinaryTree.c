@@ -4,7 +4,7 @@
 #include "Stack.h"
 
 void binaryTreeTraveseInOrder(Node *root){
-	Stack *stack = stackNew();
+  Stack *stack = stackNew();
 	Node *curNode;
 	
 	curNode = root;
