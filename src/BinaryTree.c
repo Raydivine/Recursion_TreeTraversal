@@ -23,9 +23,24 @@ void binaryTreeTraveseInOrder(Node *root){
 }
 
 
-void printLinear(Node *node){
-	if(node!=NULL){
-		printLinear(node->left);
-		printf("Node: %d\n",node->data);
-	}
+// void binaryTreePrintLinear(Node *node){
+	// if(node!=NULL){
+		// binaryTreePrintLinear(node->left);
+		// printf("Node: %d\n",node->data);
+	// }
+// }
+
+
+void binaryTreePrintLinear(Node *node){
+	Node *curNode;
+   
+	if(node->left!=NULL){
+	binaryTreePrintLinear(node->left);
+	printf("Node: %d\n",node->left->data);
+  }	
+	printf("Node: %d\n",node->data);
+	
+	if(node->right!=NULL){
+	printf("Node: %d\n",node->right->data);	
+ }
 }

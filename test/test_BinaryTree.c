@@ -119,6 +119,21 @@ void xtest_binary_tree_with_2_nodes_parrent_and_left_child_and_left_grandchild(v
  
 }
 
+
+
+/*
+		8
+	/		\
+	7		9
+*/
+void xtest_binaryTreePrintLinear_tree_with_2_nodes_parrent_and_left_child_and_right_child(void){
+ Node leftChild  =  {NULL,	NULL,	7};
+ Node rightChild = {NULL,	NULL,	9};
+ Node root = {&leftChild, &rightChild , 8};
+
+ binaryTreePrintLinear(&root);
+}
+
 /*
 			 10
 		 /		\
@@ -127,12 +142,31 @@ void xtest_binary_tree_with_2_nodes_parrent_and_left_child_and_left_grandchild(v
  1
 */
 
-void test_printlinear_tree_with_3_left_child(void){
+void xtest_binaryTreePrintLinear_with_3_left_child(void){
  Node leftChild2 = {.left=NULL,	.right=NULL,	.data=1};
  Node leftChild1 = {.left=&leftChild2, .right=NULL,	.data=5};
  Node root 		   = {.left=&leftChild1, .right=NULL , .data=10};
  
+ binaryTreePrintLinear(&root);
+}
 
- printLinear(&root);
+/*
+		 6
+	 /	 \
+ 	 4		*
+ /  \
+3   5
+*/
+void xtest_binaryTreePrintLinear_with_2_nodes_parrent_and_left_child_and_left_grandchild(void){
+ Node leftChild2  = {NULL,	NULL,	3};
+ Node rightChild2 = {NULL,	NULL,	5};
+ Node leftChild1  = {&leftChild2,	&rightChild2,	4};
+ Node root			  = {&leftChild1, NULL , 6};
+ 
+ // print_Expect(3);
+ // print_Expect(4);
+ // print_Expect(5);
+ // print_Expect(6);
+ binaryTreePrintLinear(&root);
  
 }

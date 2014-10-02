@@ -12,6 +12,6 @@ struct	Node{
 };
 
 void binaryTreeTraveseInOrder(Node *root);
-void printLinear(Node *node);
+void binaryTreePrintLinear(Node *node);
 
 #endif // BinaryTree_H
